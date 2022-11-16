@@ -132,7 +132,7 @@ if (Numeroing === numeroAlAzar) {
 }
 
 // Obtener edad
-
+let edad= prompt("Ingresar edad");
 if(edad < 13) {
   console.log("Es niño");
 }if(edad < 18 ){
@@ -144,20 +144,44 @@ if(edad < 13) {
 // Loops
 let N1 =prompt("Escribe un número");
 for (let i=1; i <= N1; i++) {
-  console("nro: " + i);
+  console.log("nro: " + i);
 }
 
 // Mostrar todos los números de 1 a N aumentando de 2 en 2 donde n lo ingresa el usuario en un prompt.
 let ingreso =prompt("Escribe un número");
 for (let i=1; i <= ingreso; i+2) {
-  console("nro: " + i);
+  console.log("nro: " + i);
 }
 
 // Mostrar todos los números de N a 1 disminuyendo de 1 en 1 donde n lo ingresa el usuario en un prompt.
 let disminuye =prompt("Escribe un número");
-for (let i=1; i => disminuye; i--) {
+if (disminuye && disminuye instanceof Number) {
+  for (let i=disminuye; i >= 1; i--) {
+    console.log ("nro: " - i);
+  }
+}
 
-  console("nro: " - i);
+// Escribir utilizando console.log la tabla del 9 hasta 9x10
+function tablaDeMultiplicar(nueve) {
+  let i = 1;
+  let result = 0;
+  while(i<=10){
+      result=i*nueve;
+      console.log(nueve + "*" + i + "=" +  result);
+      i++;
+  }
+}
+tablaDeMultiplicar(9);
+
+// Pedir al usuario que ingrese un número en un prompt, hacer la suma de todos los dígitos, validar que el número ingresado no contenga letras
+let valor1 = prompt("Ingrese el valor 1",0);
+console.log("valor 1: " + valor1);
+let valor2 = prompt("Ingrese el valor 2");
+if (valor1 instanceof Number  && valor2 instanceof Number) {
+  let sum = parseInt(valor1) + parseInt(valor2);
+  console.log("resultado: " + sum);
+} else {
+  console.error("valor1, valor2 es invalido")
 }
 
 // Patrones con Loop anidados
